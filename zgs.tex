@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{amsmath}   % Ermöglicht mathematische Funktionen
+\usepackage{amssymb}   % Fügt zusätzliche mathematische Symbole hinzu
+
+\begin{document}
+
+\section*{Der zentrale Grenzwertsatz}
+
+Der zentrale Grenzwertsatz (ZGS) ist ein fundamentales Resultat der Wahrscheinlichkeitstheorie, das die Verteilung von Summen unabhängiger, identisch verteilter (i.i.d.) Zufallsvariablen (ZV) beschreibt. Er besagt, dass unter bestimmten Voraussetzungen die Summe einer großen Anzahl solcher ZV annähernd normalverteilt ist, unabhängig von der Verteilung der einzelnen ZV. Dies ist besonders nützlich, da die Normalverteilung gut untersucht und mathematisch handhabbar ist.
+
+\section*{Aussage}
+
+Sei \( X_1, X_2, \dots, X_n \) eine Folge von i.i.d. Zufallsvariablen mit dem Erwartungswert \( \mu = E(X_i) \) und der Varianz \( \sigma^2 = \text{Var}(X_i) \), wobei \( 0 < \sigma^2 < \infty \) gilt. Dann konvergiert die standardisierte Summe \( Z_n \) dieser ZV für \( n \to \infty \) in Verteilung gegen eine Standardnormalverteilung:
+
+\[
+Z_n = \frac{\sum_{i=1}^n X_i - n\mu}{\sigma\sqrt{n}} \xrightarrow{d} N(0, 1).
+\]
+
+Das bedeutet, dass für große \(n\) die Summe der ZV näherungsweise normalverteilt ist mit Erwartungswert \(n\mu\) und Varianz \(n\sigma^2\):
+
+\[
+\sum_{i=1}^n X_i \sim N(n\mu, n\sigma^2).
+\]
+
+\section*{Erklärung der Standardisierung}
+
+Um die Summe der Zufallsvariablen in eine Standardnormalverteilung zu transformieren, subtrahiert man den Erwartungswert \(n\mu\) und teilt durch die Standardabweichung \( \sigma\sqrt{n} \). Dies führt zur oben angegebenen Formel.
+
+\section*{Anwendungen}
+
+Der ZGS wird in vielen Bereichen der Statistik und der Wahrscheinlichkeitstheorie angewendet. Typische Beispiele sind:
+
+\begin{itemize}
+    \item \textbf{Schätzung des Mittelwerts der Population:} Der ZGS hilft, die Verteilung des Mittelwerts aus einer Stichprobe zu bestimmen. Bei großen Stichproben ist der Mittelwert der Stichprobe annähernd normalverteilt, was die Anwendung von Konfidenzintervallen und Hypothesentests erleichtert.
+    \item \textbf{Finanzmodelle:} In der Finanzmathematik wird der ZGS verwendet, um die Verteilung von Portfolio-Renditen oder Aktienkursen zu modellieren. Wenn die Renditen von Aktien oder anderen Finanzinstrumenten als i.i.d. Zufallsvariablen angenommen werden, wird die Summe der Renditen bei großem \(n\) normalverteilt.
+\end{itemize}
+
+\section*{Der Lindeberg-Feller-Zentrale-Grenzwertsatz}
+
+Der ZGS hat verschiedene Verallgemeinerungen. Eine davon ist der \textbf{Lindeberg-Feller-Zentrale-Grenzwertsatz}, der schwächere Bedingungen an die Unabhängigkeit und die identische Verteilung der Zufallsvariablen stellt.
+
+\end{document}
